@@ -78,3 +78,40 @@ document.querySelector(".button-container").onclick = function(event) {
         }
 
     }
+
+    // Theme
+
+
+const whiteThemeButton = document.querySelector(".white-theme");
+const mainDiv = document.querySelector("#container");
+
+
+
+
+const currentTheme = localStorage.getItem("theme");
+console.log(currentTheme);
+let theme = "dark";
+if (currentTheme == "white"){
+    mainDiv.classList.add("white");
+    mainDiv.classList.toggle("dark");
+
+}
+
+
+
+whiteThemeButton.addEventListener("click", function()
+{   
+    mainDiv.classList.add("white");
+    mainDiv.classList.toggle("dark");
+    if(mainDiv.classList.contains("dark")){
+        theme = "dark";
+    }
+    else if (mainDiv.classList.contains("white")){
+        theme = "white";
+    }
+        
+        localStorage.setItem("theme", theme);
+    
+        
+     
+})
