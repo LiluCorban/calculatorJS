@@ -10,7 +10,7 @@ function clearAll(){
     secondNumber = "";
     operand = "";
     finish = false;
-    out.textContent = 0;
+    out.textContent = "0";
 }
 document.querySelector("#c").onclick = clearAll;
 document.querySelector(".button-container").onclick = function(event) {
@@ -91,7 +91,7 @@ const mainDiv = document.querySelector("#container");
 const currentTheme = localStorage.getItem("theme");
 console.log(currentTheme);
 let theme = "dark";
-if (currentTheme == "white"){
+if (currentTheme === "white"){
     mainDiv.classList.add("white");
     mainDiv.classList.toggle("dark");
 
